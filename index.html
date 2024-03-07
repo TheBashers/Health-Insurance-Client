@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Risk Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Health Risk Calculator</h1>
+        <p>
+            This program helps you classify health insurance
+            based on their risk level. That is determined
+            by their health. Their health is judged in terms
+            of their body-mass index, blood pressure, age,
+            and family history of disease.
+        </p>
+        <form id="riskForm">
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" min="0" max="150" required>
+            <label for="feet">Height (feet):</label>
+            <input type="number" id="feet" min="2" max="10" required>
+            <label for="inches">Height (inches):</label>
+            <input type="number" id="inches" min="0" max="11" required>
+            <label for="weight">Weight (pounds):</label>
+            <input type="number" id="weight" min="0" max="3000" required>
+            <label for="systolic">Systolic Blood Pressure:</label>
+            <input type="number" id="systolic" min="0" max="1000" required>
+            <label for="diastolic">Diastolic Blood Pressure:</label>
+            <input type="number" id="diastolic" min="0" max="1000" required>
+            <p>Does the person have a family history of...</p>
+            <label for="diabetes">Diabetes?</label>
+            <select id="diabetes">
+                <option value="n">No</option>
+                <option value="y">Yes</option>
+            </select>
+            <label for="cancer">Cancer?</label>
+            <select id="cancer">
+                <option value="n">No</option>
+                <option value="y">Yes</option>
+            </select>
+            <label for="alzheimers">Alzheimers?</label>
+            <select id="alzheimers">
+                <option value="n">No</option>
+                <option value="y">Yes</option>
+            </select>
+            <button type="submit">Calculate</button>
+            <button type="button" id="resetButton">Reset</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
