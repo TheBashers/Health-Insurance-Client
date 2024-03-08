@@ -14,7 +14,7 @@ document
         const resultElement = document.getElementById("result");
 
         // When testing locally, change the URL to "http://localhost:3000/api/v1/risks"
-        fetch("http://localhost:3000/api/v1/risks", {
+        fetch("https://healthinsuranceapi.azurewebsites.net/api/v1/risks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
