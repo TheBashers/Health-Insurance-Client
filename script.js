@@ -1,3 +1,17 @@
+function pingServer() {
+    // When testing locally, change the URL to "http://localhost:3000/api/v1/risks"
+    fetch("https://healthinsuranceapi.azurewebsites.net/ping")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+}
+
+pingServer();
+
 document
     .getElementById("riskForm")
     .addEventListener("submit", function (event) {
